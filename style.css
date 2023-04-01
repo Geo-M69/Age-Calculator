@@ -238,8 +238,12 @@ body {
     }
 
     #arrow-circle {
-        width: 25%;
-        height: 85%;
+        width: 14%;
+        height: 60%;
+    }
+    #arrow-circle img {
+        max-width: 100%;
+        max-height: 100%;
     }
     .total-years {
         font-size: 4rem;
