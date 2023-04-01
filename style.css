@@ -1,0 +1,252 @@
+:root {
+    --backgroundColor: #F0F0F0;
+    --circleColor: #854DFF;
+    --ageYears: "--";
+    --ageMonths: "--";
+    --ageDays: "--";
+    font-size: 14px;
+}
+
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-BoldItalic";
+    src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+body {
+    background-color: var(--backgroundColor);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.age-calculator-container {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 80vh;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+}
+
+.information-container {
+    display: flex;
+    width: 85%;
+    height: 80%;
+    flex-direction: column;
+}
+
+.information-entering-container {
+    display: flex;
+    width: 85%;
+    height: 15%;
+    justify-content: space-evenly;
+}
+
+.day-container {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.day-text {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    color: #716F6F;
+    font-family: "Poppins-Regular";
+    font-weight: 700;
+    align-items: center;
+    letter-spacing: .3rem;
+}
+
+#day-input {
+    width: 100%;
+    height: 60%;
+    background-color: transparent;
+    border: 1px solid #DCDCDC;
+    border-radius: 8px;
+    margin-top: .9rem;
+}
+
+.month-container {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+}
+
+.month-text {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    color: #716F6F;
+    font-family: "Poppins-Regular";
+    font-weight: 700;
+    align-items: center;
+    letter-spacing: .3rem;
+}
+
+#month-input {
+    width: 100%;
+    height: 60%;
+    background-color: transparent;
+    border: 1px solid #DCDCDC;
+    border-radius: 8px;
+    margin-top: .9rem;
+}
+
+.year-container {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+}
+
+.year-text {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    color: #716F6F;
+    font-family: "Poppins-Regular";
+    font-weight: 700;
+    align-items: center;
+    letter-spacing: .3rem;
+}
+
+#year-input {
+    width: 100%;
+    height: 60%;
+    background-color: transparent;
+    border: 1px solid #DCDCDC;
+    border-radius: 8px;
+    margin-top: .9rem;
+}
+
+.button-container {
+    display: flex;
+    width: 100%;
+    height: 15%;
+    align-items: center;
+    justify-content: end;
+}
+
+#arrow-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 100%;
+    background-color: var(--circleColor);
+    border-radius: 50%;
+    box-shadow: none;
+    border: none;
+}
+
+.arrow-circle img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.total-info-container {
+    display: flex;
+    width: 100%;
+    height: 60%;
+    flex-direction: column;
+}
+
+.total-years {
+    display: flex;
+    width: 100%;
+    height: 33.33%;
+    color: #151515;
+    font-family: "Poppins-BoldItalic";
+    font-size: 4.7rem;
+    font-weight: 800;
+    font-style: italic;
+    align-items: center;
+}
+
+#empty-string-years::before {
+    content: var(--ageYears);
+    color: #854DFF;
+    margin-right: 1rem;
+}
+
+#empty-string-months::before {
+    content: var(--ageMonths);
+    color: #854DFF;
+    margin-right: 1rem;
+}
+
+#empty-string-days::before {
+    content: var(--ageDays);
+    color: #854DFF;
+    margin-right: 1rem;
+}
+
+.total-months {
+    display: flex;
+    width: 100%;
+    height: 33.33%;
+    color: #151515;
+    font-family: "Poppins-BoldItalic";
+    font-size: 4.7rem;
+    font-weight: 800;
+    font-style: italic;
+    align-items: center;
+}
+
+.total-days {
+    display: flex;
+    width: 100%;
+    height: 33.33%;
+    color: #151515;
+    font-family: "Poppins-BoldItalic";
+    font-size: 4.7rem;
+    font-weight: 800;
+    font-style: italic;
+    align-items: center;
+}
+
+.attribution-container {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins-Regular";
+}
+
+@media screen and (max-width: 600px) {
+    .age-calculator-container {
+        width: 85vw;
+    }
+    #arrow-circle {
+        width: 25%;
+        height: 85%;
+    }
+    .total-years {
+        font-size: 4rem;
+    }
+    .total-months {
+        font-size: 3.9rem;
+    }
+    .total-days {
+        font-size: 3.9rem;
+    }
+    .attribution-container {
+        font-size: .9rem;
+    }
+}

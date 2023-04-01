@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="age-calculator-container">
+    <div class="information-container">
+      <div class="information-entering-container">
+        <div class="day-container">
+          <div class="day-text">DAY</div>
+          <input type="text" id="day-input">
+        </div>
+        <div class="month-container">
+          <div class="month-text">MONTH</div>
+          <input type="text" id="month-input">
+        </div>
+        <div class="year-container">
+          <div class="year-text">YEAR</div>
+          <input type="text" id="year-input">
+        </div>
+      </div>
+      <div class="button-container">
+        <button id="arrow-circle">
+          <img src="./assets/images/icon-arrow.svg" alt="">
+        </button>
+      </div>
+      <div class="total-info-container">
+        <div class="total-years">
+          <span id="empty-string-years"></span>
+          <span>years</span>
+        </div>
+        <div class="total-months">
+          <span id="empty-string-months"></span>
+          <span>months</span>
+        </div>
+        <div class="total-days">
+          <span id="empty-string-days"></span>
+          <span>days</span>
+        </div>
+      </div>
+      <div class="attribution-container">
+        <p>Challenge by&nbsp;<a href="https://www.frontendmentor.io?ref=challenge" target="_blank" style="text-decoration: none; color: blue;">Frontend Mentor</a>.</p>&nbsp;
+        Coded by&nbsp;<a href="#" style="text-decoration: none;">Geo</a>.
+      </div>
+    </div>
+  </div>
+  <script src="./calculateAge.js"></script>
+</body>
+</html>
