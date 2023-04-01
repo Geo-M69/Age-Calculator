@@ -259,7 +259,7 @@ body {
     }
 }
 
-@media screen and (min-width: 390px) {
+@media screen and (max-width: 400px) {
     .age-calculator-container {
         width: 70vw;
         height: 60vh;
