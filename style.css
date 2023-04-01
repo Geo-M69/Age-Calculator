@@ -229,7 +229,7 @@ body {
     font-family: "Poppins-Regular";
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
     .age-calculator-container {
         width: 75vw;
     }
