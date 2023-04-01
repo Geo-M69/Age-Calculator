@@ -231,7 +231,7 @@ body {
 
 @media screen and (max-width: 600px) {
     .age-calculator-container {
-        width: 85vw;
+        width: 75vw;
     }
     #arrow-circle {
         width: 25%;
