@@ -238,7 +238,7 @@ body {
     }
 
     #arrow-circle {
-        width: 1%;
+        width: 18%;
         height: 65%;
     }
     #arrow-circle img {
@@ -259,7 +259,7 @@ body {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 390px) {
     .age-calculator-container {
         width: 70vw;
         height: 60vh;
