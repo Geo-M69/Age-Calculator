@@ -229,7 +229,7 @@ body {
     font-family: "Poppins-Regular";
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 600px) {
     .age-calculator-container {
         width: 75vw;
     }
@@ -251,6 +251,32 @@ body {
         font-size: 3.9rem;
     }
     .attribution-container {
+        font-size: .7rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        width: 88vw;
+        height: 89vh;
+    }
+    .age-calculator-container {
+        width: 70vw;
+        height: 60vh;
+        margin-bottom: 5rem;
+    }
+    .day-text {
+        font-size: .6rem;
+    }
+    .month-text {
+        font-size: .55rem;
+    }
+    .year-text {
+        font-size: .6rem;
+    }
+    .total-years, .total-months, .total-days {
+        font-size: 2.9rem;
+    }.attribution-container {
         font-size: .7rem;
     }
 }
