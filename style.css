@@ -288,6 +288,7 @@ body {
         width: 18%;
     }
     #arrow-circle img {
-        max-width: fit-content;
+        max-width: 80%;
+        max-height: 80%;
     }
 }
