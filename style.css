@@ -276,3 +276,18 @@ body {
         font-size: .7rem;
     }
 }
+
+@media screen and (max-width: 376px) {
+    .attribution-container {
+        font-size: .6rem;
+    }
+    .total-months {
+        font-size: 2.8rem;
+    }
+    #arrow-circle {
+        width: 18%;
+    }
+    #arrow-circle img {
+        max-width: fit-content;
+    }
+}
