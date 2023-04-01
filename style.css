@@ -233,6 +233,10 @@ body {
     .age-calculator-container {
         width: 75vw;
     }
+    .information-entering-container {
+        width: auto;
+    }
+
     #arrow-circle {
         width: 25%;
         height: 85%;
