@@ -320,11 +320,16 @@ main {
         margin-right: 0;
     }
 
+    .total-age-container {
+        margin-left: 1rem;
+    }
+
     .total-years-container, .total-months-container, .total-days-container {
         font-size: 13.9vw;
     }
 
     .attribution-container {
         font-size: .6rem;
+        margin-left: .65rem;
     }
 }
