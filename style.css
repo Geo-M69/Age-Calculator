@@ -320,6 +320,10 @@ main {
         margin-right: 0;
     }
 
+    #myButton img {
+        max-width: 60%;
+    }
+
     .total-age-container {
         margin-left: 1rem;
     }
