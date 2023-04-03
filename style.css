@@ -286,3 +286,45 @@ main {
     align-items: end;
     font-family: "Poppins";
 }
+
+@media screen and (max-width: 400px) {
+    main {
+        width: 85%;
+        height: 60%;
+    }
+
+    .age-calculator-container {
+        width: 100%;
+    }
+
+    .birth-date-input-container {
+        width: 95%;
+    }
+
+    .day-input-container, .month-input-container, .year-input-container {
+        font-size: .65rem;
+        letter-spacing: .19rem;
+    }
+
+    #day-input, #month-input, #year-input {
+        font-size: 1.4rem;
+        width: 110%;
+    }
+
+    .button-container {
+        justify-content: center;
+    }
+
+    #myButton {
+        width: 18%;
+        margin-right: 0;
+    }
+
+    .total-years-container, .total-months-container, .total-days-container {
+        font-size: 13.9vw;
+    }
+
+    .attribution-container {
+        font-size: .6rem;
+    }
+}
