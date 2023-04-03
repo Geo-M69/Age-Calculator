@@ -8,47 +8,52 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="age-calculator-container">
-    <div class="information-container">
-      <div class="information-entering-container">
-        <div class="day-container">
-          <div class="day-text">DAY</div>
-          <input type="text" id="day-input" value="DD">
+  <main>
+    <div class="age-calculator-container">
+      <header class="birth-date-input-container">
+        <div class="day-input-container">
+          <div class="day">DAY</div>
+          <input type="text" id="day-input" placeholder="DD">
+          <span id="day-error-message"></span>
         </div>
-        <div class="month-container">
-          <div class="month-text">MONTH</div>
-          <input type="text" id="month-input" value="MM">
+        <div class="month-input-container">
+          <div class="month">MONTH</div>
+          <input type="text" id="month-input" placeholder="MM">
+          <span id="month-error-message"></span>
         </div>
-        <div class="year-container">
-          <div class="year-text">YEAR</div>
-          <input type="text" id="year-input" value="YYYY">
+        <div class="year-input-container">
+          <div class="year">YEAR</div>
+          <input type="text" id="year-input" placeholder="YYYY">
+          <span id="year-error-message"></span>
         </div>
-      </div>
-      <div class="button-container">
-        <button id="arrow-circle">
-          <img src="./assets/images/icon-arrow.svg" alt="">
+      </header>
+      <section class="button-container">
+        <button id="myButton">
+          <img src="./assets/images/icon-arrow.svg" alt="" class="arrow-icon">
         </button>
-      </div>
-      <div class="total-info-container">
-        <div class="total-years">
-          <span id="empty-string-years"></span>
+      </section>
+      <section class="total-age-container">
+        <div class="total-years-container">
+          <span id="amount-of-years"></span>
           <span>years</span>
         </div>
-        <div class="total-months">
-          <span id="empty-string-months"></span>
+        <div class="total-months-container">
+          <span id="amount-of-months"></span>
           <span>months</span>
         </div>
-        <div class="total-days">
-          <span id="empty-string-days"></span>
+        <div class="total-days-container">
+          <span id="amount-of-days"></span>
           <span>days</span>
         </div>
-      </div>
-      <div class="attribution-container">
-        <p>Challenge by&nbsp;<a href="https://www.frontendmentor.io?ref=challenge" target="_blank" style="text-decoration: none; color: blue;">Frontend Mentor</a>.</p>&nbsp;
-        Coded by&nbsp;<a href="#" style="text-decoration: none;">Geo</a>.
-      </div>
+      </section>
+      <footer class="attribution-container">
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" style="text-decoration: none; color: blue;">Frontend Mentor</a>. 
+          Coded by <a href="#" style="text-decoration: none; color: blue;">Geo</a>.
+        </div>
+      </footer>
     </div>
-  </div>
+  </main>
   <script src="./calculateAge.js"></script>
 </body>
 </html>

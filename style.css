@@ -1,28 +1,51 @@
 :root {
-    --backgroundColor: #F0F0F0;
-    --circleColor: #854DFF;
+    --bodyBackgroundColor: #F0F0F0;
+    --calculatorBackgroundColor: #FFFFFF;
+    --titleTextColor: #716F6F;
+    --inputBorderColor: #DCDCDC;
+    --focusInputColor: #854DFF;
+    --buttonColor: #854DFF;
     --ageYears: "--";
     --ageMonths: "--";
     --ageDays: "--";
-    font-size: 14px;
 }
 
 @font-face {
-    font-family: "Poppins-Regular";
+    font-family: "Poppins-Bold";
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-ExtraBoldItalic";
+    src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "Poppins";
     src: url(./assets/fonts/Poppins-Regular.ttf);
 }
 
 @font-face {
-    font-family: "Poppins-BoldItalic";
-    src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+    font-family: "Poppins-Italic";
+    src: url(./assets/fonts/Poppins-Italic.ttf);
 }
 
 body {
-    background-color: var(--backgroundColor);
+    background-color: var(--bodyBackgroundColor);
+    display: flex;
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 50%;
+    height: 75%;
+    background-color: var(--calculatorBackgroundColor);
+    border-radius: 20px 20px 200px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,272 +53,236 @@ body {
 
 .age-calculator-container {
     display: flex;
-    flex-direction: column;
-    width: 50vw;
-    height: 80vh;
-    border-radius: 20px;
-    background-color: #FFFFFF;
-    align-items: center;
-    justify-content: center;
-}
-
-.information-container {
-    display: flex;
-    width: 85%;
+    width: 90%;
     height: 80%;
     flex-direction: column;
 }
 
-.information-entering-container {
+.birth-date-input-container {
     display: flex;
     width: 85%;
-    height: 15%;
+    height: 20%;
+    flex-direction: row;
     justify-content: space-evenly;
+    margin-top: 1rem;
 }
 
-.day-container {
+.day-input-container {
     display: flex;
     width: 20%;
     height: 100%;
     flex-direction: column;
 }
 
-.day-text {
-    display: flex;
+.day {
     width: 100%;
     height: 20%;
-    color: #716F6F;
-    font-family: "Poppins-Regular";
-    font-weight: 700;
-    align-items: center;
-    letter-spacing: .3rem;
+    color: var(--titleTextColor);
+    font-family: "Poppins-Bold";
+    letter-spacing: .4rem;
 }
 
 #day-input {
     width: 100%;
     height: 60%;
+    margin-top: .5rem;
     background-color: transparent;
-    border: 1px solid #DCDCDC;
-    border-radius: 8px;
-    margin-top: .9rem;
+    border-radius: 10px;
+    border-color: var(--inputBorderColor);
+    border-style: solid;
+    color: var(--titleTextColor);
+    font-family: "Poppins-Bold";
+    font-size: 1.7rem;
 }
 
-.month-container {
+#day-input:focus {
+    border-color: var(--focusInputColor);
+    outline: none;
+    color: black;
+}
+
+#day-error-message {
+    width: 100%;
+    height: 10%;
+    font-family: "Poppins-Italic";
+    font-size: .65rem;
+    color: red;
+}
+
+.month-input-container {
     display: flex;
-    flex-direction: column;
     width: 20%;
     height: 100%;
+    flex-direction: column;
 }
 
-.month-text {
-    display: flex;
+.month {
     width: 100%;
     height: 20%;
-    color: #716F6F;
-    font-family: "Poppins-Regular";
-    font-weight: 700;
-    align-items: center;
-    letter-spacing: .3rem;
+    color: var(--titleTextColor);
+    font-family: "Poppins-Bold";
+    letter-spacing: .4rem;
 }
 
 #month-input {
     width: 100%;
     height: 60%;
+    margin-top: .5rem;
     background-color: transparent;
-    border: 1px solid #DCDCDC;
-    border-radius: 8px;
-    margin-top: .9rem;
+    border-radius: 10px;
+    border-color: var(--inputBorderColor);
+    border-style: solid;
+    color: var(--titleTextColor);
+    font-family: "Poppins-Bold";
+    font-size: 1.7rem;
 }
 
-.year-container {
+#month-input:focus {
+    border-color: var(--focusInputColor);
+    outline: none;
+    color: black;
+}
+
+#month-error-message {
+    width: 100%;
+    height: 10%;
+    font-family: "Poppins-Italic";
+    font-size: .65rem;
+    color: red;
+}
+
+.year-input-container {
     display: flex;
-    flex-direction: column;
     width: 20%;
     height: 100%;
+    flex-direction: column;
 }
 
-.year-text {
-    display: flex;
+.year {
     width: 100%;
     height: 20%;
-    color: #716F6F;
-    font-family: "Poppins-Regular";
-    font-weight: 700;
-    align-items: center;
-    letter-spacing: .3rem;
+    color: var(--titleTextColor);
+    font-family: "Poppins-Bold";
+    letter-spacing: .4rem;
 }
 
 #year-input {
     width: 100%;
     height: 60%;
+    margin-top: .5rem;
     background-color: transparent;
-    border: 1px solid #DCDCDC;
-    border-radius: 8px;
-    margin-top: .9rem;
+    border-radius: 10px;
+    border-color: var(--inputBorderColor);
+    border-style: solid;
+    color: var(--titleTextColor);
+    font-family: "Poppins-Bold";
+    font-size: 1.7rem;
+}
+
+#year-input:focus {
+    border-color: var(--focusInputColor);
+    outline: none;
+    color: black;
+}
+
+#year-error-message {
+    width: 100%;
+    height: 10%;
+    font-family: "Poppins-Italic";
+    font-size: .65rem;
+    color: red;
 }
 
 .button-container {
     display: flex;
     width: 100%;
-    height: 15%;
-    align-items: center;
+    height: 20%;
     justify-content: end;
+    align-items: center;
 }
 
-#arrow-circle {
+#myButton {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 10%;
-    height: 100%;
-    background-color: var(--circleColor);
+    width: 9%;
+    height: 78%;
     border-radius: 50%;
+    background-color: var(--buttonColor);
+    outline: none;
     box-shadow: none;
     border: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
 }
 
-.arrow-circle img {
+#myButton img {
     max-width: 100%;
     max-height: 100%;
 }
 
-.total-info-container {
+#myButton:active {
+    background-color: black;
+}
+
+.total-age-container {
     display: flex;
     width: 100%;
-    height: 60%;
+    height: 50%;
     flex-direction: column;
 }
 
-.total-years {
+.total-years-container {
     display: flex;
     width: 100%;
     height: 33.33%;
-    color: #151515;
-    font-family: "Poppins-BoldItalic";
-    font-size: 4.7rem;
-    font-weight: 800;
-    font-style: italic;
+    color: black;
+    font-family: "Poppins-ExtraBoldItalic";
+    font-size: 3.9vw;
     align-items: center;
 }
 
-#empty-string-years::before {
+#amount-of-years::after {
+    color: #854DFF;
     content: var(--ageYears);
-    color: #854DFF;
     margin-right: 1rem;
 }
 
-#empty-string-months::before {
+.total-months-container {
+    display: flex;
+    width: 100%;
+    height: 33.33%;
+    color: black;
+    font-family: "Poppins-ExtraBoldItalic";
+    font-size: 3.9vw;
+    align-items: center;
+}
+
+#amount-of-months::after {
+    color: #854DFF;
     content: var(--ageMonths);
-    color: #854DFF;
     margin-right: 1rem;
 }
 
-#empty-string-days::before {
+.total-days-container {
+    display: flex;
+    width: 100%;
+    height: 33.33%;
+    color: black;
+    font-family: "Poppins-ExtraBoldItalic";
+    font-size: 3.9vw;
+    align-items: center;
+}
+
+#amount-of-days::after {
+    color: #854DFF;
     content: var(--ageDays);
-    color: #854DFF;
     margin-right: 1rem;
-}
-
-.total-months {
-    display: flex;
-    width: 100%;
-    height: 33.33%;
-    color: #151515;
-    font-family: "Poppins-BoldItalic";
-    font-size: 4.7rem;
-    font-weight: 800;
-    font-style: italic;
-    align-items: center;
-}
-
-.total-days {
-    display: flex;
-    width: 100%;
-    height: 33.33%;
-    color: #151515;
-    font-family: "Poppins-BoldItalic";
-    font-size: 4.7rem;
-    font-weight: 800;
-    font-style: italic;
-    align-items: center;
 }
 
 .attribution-container {
     display: flex;
     width: 100%;
     height: 10%;
-    align-items: center;
-    justify-content: center;
-    font-family: "Poppins-Regular";
-}
-
-@media screen and (max-width: 600px) {
-    .age-calculator-container {
-        width: 75vw;
-    }
-    .information-entering-container {
-        width: auto;
-    }
-
-    #arrow-circle {
-        width: 18%;
-        height: 65%;
-    }
-    #arrow-circle img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-    .total-years {
-        font-size: 4rem;
-    }
-    .total-months {
-        font-size: 3.3rem;
-    }
-    .total-days {
-        font-size: 3.9rem;
-    }
-    .attribution-container {
-        font-size: .7rem;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .age-calculator-container {
-        width: 70vw;
-        height: 60vh;
-        margin-bottom: 5rem;
-    }
-    .day-text {
-        font-size: .6rem;
-    }
-    .month-text {
-        font-size: .55rem;
-    }
-    .year-text {
-        font-size: .6rem;
-    }
-    .total-years, .total-months, .total-days {
-        font-size: 2.9rem;
-    }.attribution-container {
-        font-size: .7rem;
-    }
-}
-
-@media screen and (max-width: 376px) {
-    .attribution-container {
-        font-size: .6rem;
-    }
-    .total-months {
-        font-size: 2.8rem;
-    }
-    #arrow-circle {
-        width: 18%;
-    }
-    #arrow-circle img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-    .button-container {
-        margin-top: .7rem;
-    }
+    align-items: end;
+    font-family: "Poppins";
 }
